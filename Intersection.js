@@ -14,12 +14,12 @@ function intersection([arr1, arr2, arr3]) {
   let final = [];
 
   for (let i = 0; i < arr.length; i++) {
-	  
+
     let num = arr[i];
-    let result = array.every(function (item) {	// running includes method to all the subarrays 
+    let result = array.every(function(item) { // running includes method to all the subarrays 
       return item.includes(num)
     })
-    if (result) {  								// if true then pushing element to final array
+    if (result) { // if true then pushing element to final array
       final.push(num);
     }
   }

@@ -4,23 +4,21 @@ Create a function majority that accepts an array and a callback. The callback wi
 
 var isOdd = function(num) { return num % 2 === 1; };
 
-console.log(majority([1, 2, 3, 4, 5], isOdd)); 		// true
-console.log(majority([2, 3, 4, 5], isOdd)); 			// false
+console.log(majority([1, 2, 3, 4, 5], isOdd));    // true
+console.log(majority([2, 3, 4, 5], isOdd));       // false
 */
 
 function majority(array, callback) {
-  
+
   let length = array.length;
   let half = length / 2;
-  let arr = array.filter(function (item) {			// filtering each item using callback 
+  let arr = array.filter(function(item) { // filtering each item using callback 
     return callback(item)
   });
 
-  if (arr.length > half) {							// if  length of filtered array is more than half the length of original array
-    return true 									// majority of elements are true
-  }
-  else {
-    return false									// majority of elements are false
+  if (arr.length > half) { // if  length of filtered array is more than half the length of original array
+    return true // majority of elements are true
+  } else {
+    return false // majority of elements are false
   }
 }
-  

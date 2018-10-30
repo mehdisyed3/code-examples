@@ -8,19 +8,18 @@ var tvShows = ['curb', 'rickandmorty', 'seinfeld', 'sunny', 'friends']
 console.log(prioritize(tvShows, startsWithS)); //  ['seinfeld', 'sunny', 'curb', 'rickandmorty', 'friends']
 */
 
-function prioritize(arr, callback){
-  
-  let first = []; 								// var for all strings beginning with "S"
-  let sec 	= []; 								// var for all other srtrings
-  
-  for (var i = 0 ; i < arr.length; i++){
-    if(callback(arr[i])){
-      first.push(arr[i]) 						// if callback is true push, to first
-    }
-    else{
-      sec.push(arr[i])							// if callback is false, push to sec
+function prioritize(arr, callback) {
+
+  let first = []; // var for all strings beginning with "S"
+  let sec = []; // var for all other srtrings
+
+  for (var i = 0; i < arr.length; i++) {
+    if (callback(arr[i])) {
+      first.push(arr[i]) // if callback is true push, to first
+    } else {
+      sec.push(arr[i]) // if callback is false, push to sec
     }
   }
-  
-  return first.concat(sec); 					// returning concatenated Array. 
+
+  return first.concat(sec); // returning concatenated Array. 
 }

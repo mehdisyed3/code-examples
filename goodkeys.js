@@ -4,16 +4,14 @@ Create a function goodKeys that accepts an object and a callback. The callback w
 var sunny = { mac: 'priest', dennis: 'calculating', charlie: 'birdlaw', dee: 'bird', frank: 'warthog' };
 function startsWithBird(str) { return str.slice(0, 4).toLowerCase() === 'bird'; };
 
-console.log(goodKeys(sunny, startsWithBird));		// ['charlie', 'dee']
+console.log(goodKeys(sunny, startsWithBird));   // ['charlie', 'dee']
 */
-
-
 
 function goodKeys(obj, callback) {
   let arr = [];
   for (let x in obj) {
-    if (callback(obj[x])) {							// if callback returns true
-      arr.push(x) 									// push key to arr
+    if (callback(obj[x])) { // if callback returns true
+      arr.push(x) // push key to arr
     }
   }
   return arr

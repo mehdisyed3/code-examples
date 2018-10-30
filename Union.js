@@ -8,14 +8,14 @@ console.log(union([arr1, arr2, arr3]));			// [5, 10, 15, 88, 1, 7, 100]
 */
 
 function union() {
-  let array = [...arguments].flat(2);			// flattening arguments to have all elements in one Array
+  let array = [...arguments].flat(2); // flattening arguments to have all elements in one Array
   let newArr = [];
-  
+
   for (let i = 0; i < array.length; i++) {
-    if (!newArr.includes(array[i])) {			// if newArr doesnt already have item
-      newArr.push(array[i]);					// pushing it to newArr
+    if (!newArr.includes(array[i])) { // if newArr doesnt already have item
+      newArr.push(array[i]); // pushing it to newArr
     }
   }
-  
+
   return newArr;
 }

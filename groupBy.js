@@ -3,18 +3,18 @@
 var decimals = [1.3, 2.1, 2.4,2.9,7.1,7.3];
 var floored = function(num) { return Math.floor(num); };
 
-console.log(groupBy(decimals, floored)); 	// { 1: [1.3], 2: [2.1, 2.4] }
+console.log(groupBy(decimals, floored));    // { 1: [1.3], 2: [2.1, 2.4] }
 */
 
 function groupBy(arr, callback) {
   let obj = {}
-for (let x of arr){							// using for of loop
+  for (let x of arr) { // using for of loop
     let num = callback(x);
-    if(obj[num]=== undefined){				//if key is undefined create empty array
+    if (obj[num] === undefined) { //if key is undefined create empty array
       obj[num] = [];
     }
-    obj[num].push(x)						//push value to array set to key.
+    obj[num].push(x) //push value to array set to key.
 
   }
-  return obj 
+  return obj
 }

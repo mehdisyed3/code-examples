@@ -4,21 +4,20 @@ Create a function cycleIterator that accepts an array, and returns a function. T
 const threeDayWeekend = ['Fri', 'Sat', 'Sun'];
 const getDay = cycleIterator(threeDayWeekend);
 
-console.log(getDay()); 									//'Fri'
-console.log(getDay()); 									//'Sat'
-console.log(getDay()); 									//'Sun'
-console.log(getDay()); 									//'Fri'
+console.log(getDay());                  //'Fri'
+console.log(getDay());                  //'Sat'
+console.log(getDay());                  //'Sun'
+console.log(getDay());                  //'Fri'
 */
 
 function cycleIterator(array) {
-  let index = -1; 											// setting index at -1
+  let index = -1; // setting index at -1
 
-  return function () {
-    if (index === array.length - 1) { 						// reset index if index = array.length - 1 
+  return function() {
+    if (index === array.length - 1) { // reset index if index = array.length - 1 
       index = -1;
     }
-    index++ 												// else increment index
+    index++ // else increment index
     return array[index]
   }
 }
-

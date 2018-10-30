@@ -8,27 +8,26 @@ function evenOdd(n) {
 }
 
 var nums = [1, 2, 3, 4, 5];
-console.log(countBy(nums, evenOdd)); 					// { odd: 3, even: 2 }
+console.log(countBy(nums, evenOdd));          // { odd: 3, even: 2 }
 */
 
-
 function countBy(arr, callback) {
-														// counter for even and odd set to 0
-  let evens = 0; 
+  // counter for even and odd set to 0
+  let evens = 0;
   let odds = 0;
   let obj = {};
 
-  for (var i = 0; i < arr.length; i++) {				// looping through each item of Array
+  for (var i = 0; i < arr.length; i++) { // looping through each item of Array
 
-    if (callback(arr[i]) === "even") { 					// if callback return even, adding count by 1
+    if (callback(arr[i]) === "even") { // if callback return even, adding count by 1
       evens++;
-    }
-    else if (callback(arr[i]) === "odd") {				// if callback return odd, adding count by 1
+    } else if (callback(arr[i]) === "odd") { // if callback return odd, adding count by 1
       odds++
     }
-														// setting key and value
+    
+    // setting key and value
     obj.even = evens;
-    obj.odd = odds;  
+    obj.odd = odds;
 
   }
   return obj
