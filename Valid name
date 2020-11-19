@@ -1,0 +1,38 @@
+A valid name is a name written in one of the following ways:
+
+H. Wells
+H. G. Wells
+Herbert G. Wells
+Herbert George Wells
+The following names are invalid:
+
+Herbert or Wells (single names not allowed)
+H Wells or H. G Wells (initials must end with dot)
+h. Wells or H. wells or h. g. Wells (incorrect capitalization)
+H. George Wells (middle name expanded, while first still left as initial)
+H. G. W. (last name is not a word)
+Herb. G. Wells (dot only allowed after initial, not word)
+Rules
+Both initials and words must be capitalized.
+Initials must end with a dot.
+A name must be either 2 or 3 terms long.
+If the name is 3 words long, you can expand the first and middle name or expand the first name only. You cannot keep the first name as an initial and expand the middle name only.
+The last name must be a word (not an initial).
+Your task is to write a function that determines whether a name is valid or not. Return true if the name is valid, false otherwise.
+
+
+function validName(name) {
+
+	let final = name.split(" ")
+  
+  	if (final.length < 2 || final.length >3)return false
+    if(final[final.length-1].includes("."))return false
+    if(final[0][0] !== final[0][0].toUpperCase()){return false}
+		if(final[0].includes(".") && final[0].length > 2) return false
+		if(final.length === 3 && final[0].includes(".") && !final[1].includes(".")){
+			return false
+		}
+		if(final[0].length < 2) return false
+		
+
+    return true
