@@ -1,0 +1,12 @@
+
+
+Create a function that will recursively count the number of digits of a number. 
+Conversion of the number to a string is not allowed, thus, the approach is recursive.
+
+
+function digitsCount(num) {
+	let parsedInt = parseInt(num / 10, 10)
+	if (parsedInt === 0) return 1;
+	
+	return 1 + digitsCount(parsedInt)
+}
